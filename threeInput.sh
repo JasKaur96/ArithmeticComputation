@@ -8,4 +8,6 @@ echo $compute1
 compute2=$(($a*$b+$c))
 echo $compute2
 
+compute3=$(($c+$a/$b))
+echo $compute3
 
