@@ -41,4 +41,21 @@ do
   done
 done
 
-echo "sorted array : ${arr[*]}"
+echo "sorted array in descending order : ${arr[*]}"
+
+for ((i=0; i<$len; i++))
+do
+  for ((j=i; j<$len; j++))
+  do
+    if [[ ${arr[i]} -lt ${arr[j]} ]]
+    then
+       temp=${arr[$i]}
+       arr[$i]=${arr[$j]}
+       arr[$j]=$temp
+    fi
+  done
+done
+
+echo "sorted array in ascending order: ${arr[*]}"
+
+
